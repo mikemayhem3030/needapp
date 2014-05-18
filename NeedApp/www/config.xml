@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.BucketList.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>BucketList App</name>
+<widget id="com.Need.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Need App</name>
     <description>
-        Ionic Restify and MongoDB - An End to End Hybrid App
+        Need. Fill your needs. From people near you.
     </description>
-    <author email="admin@thejackalofjavascript.com" href="http://thejackalofjavascript.com/">
-      Arvind Ravulvaru
+    <author email="mike@epicplugins.com" href="http://epicplugins.com/">
+      Mike Stott
     </author>
     <content src="index.html" />
     <access origin="*" />

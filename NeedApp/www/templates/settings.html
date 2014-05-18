@@ -1,0 +1,13 @@
+<ion-header-bar class="bar-positive">
+   <button class="button button-icon icon ion-navicon" ng-click="messages()"></button>
+   <h1 class="title" ng-click="needs()">Settings</h1>
+   <button class="button button-icon icon ion-ios7-chatbubble" ng-click="messages()"></button>
+</ion-header-bar>
+<ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+   <p>Search Distance</p>
+<div class="list">
+  <div class="item range range-positive">
+    <input type="range" name="volume" min="0" max="100" value="33">
+  </div>
+</div>
+</ion-content>

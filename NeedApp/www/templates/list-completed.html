@@ -1,5 +1,5 @@
 <ion-header-bar class="bar-positive">
-   <h1 class="title">Completed Items</h1>
+   <h1 class="title">Messages</h1>
    <button class="button button-clear" ng-click="logout()">Logout</button>
 </ion-header-bar>
 <ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
@@ -18,10 +18,10 @@
    <div class="card" >
       <div class="item item-text-wrap" ng-show="noData || incomplete">
          <span ng-show="incomplete">
-         You can have not completed any of your Bucket List items yet. Try harder!!
+         You can have had no messages about your needs
          </span>
          <span ng-show="noData">
-         No Items in your bucket List.
+         Add some needs to get messages.
          </span>
       </div>
    </div>

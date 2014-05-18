@@ -1,4 +1,4 @@
-angular.module('bucketList.controllers', ['bucketList.services'])
+angular.module('Need.controllers', ['Need.services'])
 
 .controller('SignInCtrl', function ($rootScope, $scope, API, $window) {
     // if the user is already logged in, take him to his bucketlist
@@ -33,6 +33,9 @@ angular.module('bucketList.controllers', ['bucketList.services'])
     }
 
 })
+
+
+
 
 .controller('SignUpCtrl', function ($rootScope, $scope, API, $window) {
     $scope.user = {
@@ -92,13 +95,18 @@ angular.module('bucketList.controllers', ['bucketList.services'])
                 $scope.noData = false;
             }
 
-            $ionicModal.fromTemplateUrl('templates/newItem.html', function (modal) {
+            $ionicModal.fromTemplateUrl('templates/newNeed.html', function (modal) {
                 $scope.newTemplate = modal;
             });
 
             $scope.newTask = function () {
                 $scope.newTemplate.show();
             };
+
+            $scope.toggleLeft = function() {
+                $ionicSideMenuDelegate.toggleLeft();
+              };
+
             $rootScope.hide();
         }).error(function (data, status, headers, config) {
             $rootScope.hide();

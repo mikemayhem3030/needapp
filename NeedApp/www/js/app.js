@@ -1,4 +1,4 @@
-angular.module('bucketList', ['ionic', 'bucketList.controllers', 'bucketList.services'])
+angular.module('Need', ['ionic', 'Need.controllers', 'Need.services'])
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
             if (window.StatusBar) {
@@ -46,11 +46,20 @@ angular.module('bucketList', ['ionic', 'bucketList.controllers', 'bucketList.ser
                     }
                 }
             })
+            .state('bucket.settings',{
+                url: '/settings',
+                views: {
+                    'bucket-settings':{
+                        templateUrl: 'templates/settings.html',
+                        controller: 'mySettingsCtrl'
+                    }
+                }
+            })
             .state('bucket.completed', {
                 url: '/completed',
                 views: {
                     'bucket-completed': {
-                        templateUrl: 'templates/bucket-completed.html',
+                        templateUrl: 'templates/list-completed.html',
                         controller: 'completedCtrl'
                     }
                 }
