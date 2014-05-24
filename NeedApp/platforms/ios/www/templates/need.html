@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-positive"> 
+  <ion-nav-back-button class="button-icon" ng-click = 'getPreviousTitle()'>
+    <i class="icon ion-arrow-left-c"></i>Back
+  </ion-nav-back-button>
+   <h1 class="title"><div class = 'logon'>Need</div></h1>
+   <button class="button button-clear" ng-click="logout()">Logout</button>
+</ion-header-bar>
+
+<ion-content class="has-header padding" has-tabs="false">
+   <div class="card" ng-repeat="item in list">
+      <div class="item item-text-wrap" href = "#/bucket/need/{{item.id}}" >
+         <span>
+            {{item.item}}
+         </span>
+         <br/>  <br/>
+      </div>
+    <a class="item item-avatar" ng-click="newMess()">
+        <img src="{{get_gravatar(item.user)}}">
+        <h2>{{ email }}</h2>
+        <p>Newbie Needster.</p>
+        <button id="bla" class="button button-positive slide-in-left" ng-click="newMess()">Message</button>  
+  </a>
+   </div>
+
+
+</ion-content>

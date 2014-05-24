@@ -1,0 +1,34 @@
+<ion-header-bar class="bar-positive">
+   <button class="button button-clear" ng-click="newTask()">New</button>
+   <h1 class="title"><div class = 'logon'>Profile</div></h1>
+</ion-header-bar>
+<ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+   <ion-refresher ng-hide="noData" on-refresh="doRefresh('2')"></ion-refresher>
+	<a class="item item-avatar" href="#">
+	      <img src="{{get_gravatar(email)}}">
+	      <h2>{{ email }}</h2>
+	      <p>Newbie Needster.</p>
+	</a>
+    <h4>My Needs</h4>
+    <div class="card" ng-repeat="item in list">
+      <div href = "#/bucket/need/{{item._id}}">
+      <div class="item item-text-wrap">
+         <span>
+         {{ item.item }}
+         </span>
+         <br/>  <br/>
+   		<p class="actions padding">
+            <i class="ion-trash-b icon-actions margin" ng-click="showConfirm('{{item._id}}')"></i>
+         </p> 
+      </div>
+    </div>
+   </div>
+   <br/><br/>
+      <div class="card" >
+      <div class="item item-text-wrap" ng-show="noData">
+         <span>
+         You have not added any needs yet. Click <a href="javascript:" ng-click="newTask()">here</a> and create some
+         </span>
+      </div>
+   </div>
+</ion-content>

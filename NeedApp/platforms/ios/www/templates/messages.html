@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-positive">
+   <h1 class="title">Messages</h1>
+</ion-header-bar>
+<ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+   <ion-refresher ng-hide="noData || incomplete" on-refresh="doRefresh('3')"></ion-refresher>
+   <div class="listr" ng-repeat="mess in messages" >
+         <span>
+         <a class="item item-avatar" href="#">
+            <img src="{{get_gravatar(mess.from)}}">
+            <p>{{mess.text}}</p>
+         </a>
+
+         </span>
+
+   </div>
+   <div class="card" >
+      <div class="item item-text-wrap" ng-show="noData">
+         <span ng-show="incomplete">
+         You have had no messages about your needs
+         </span>
+         <span ng-show="noData">
+         Add some needs to get messages.
+         </span>
+      </div>
+   </div>
+</ion-content>
